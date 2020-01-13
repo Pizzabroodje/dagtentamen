@@ -1,0 +1,44 @@
+<% include ../partials/head.ejs %>
+<% include ../partials/nav.ejs %>
+
+
+<div class="container-fluid">
+    <div class="text-center">
+        <h4 class="mt-5 mb-5">Hallo! Welkom bij de gevonden voorwerpen van NS.
+            <br>
+            U bent ingelogd als medewerker!</h4>
+    </div>
+    <section class="portfolio-block photography">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center">Laatst gevonden voorwerpen</h1>
+                </div>
+            </div>
+            <div class="row">
+                <% items.forEach(function(item) { %>
+                    <div class="card m-5" style="width: 30rem;">
+                        <div class="card-header"><%= item.wat %></div>
+                        <div class="card-body">
+                            Wanneer: <%= item.wanneer%>
+                            <br>
+                            Waar: <%= item.waar %>
+                            <br>
+                            Contact: <%= item.contact_station %>
+                            <br>
+                            Kenmerken: <%= item.kenmerken %>
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary">Deze is weer terecht!</button>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+</div>
+
+<% include ../partials/foot.ejs %>

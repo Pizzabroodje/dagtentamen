@@ -1,0 +1,21 @@
+<% include partials/head.ejs %>
+<% include partials/nav.ejs %>
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+    <div class="col-4">
+<form action="auth" method="POST">
+    <div class="form-group">
+        <label for="formGroupExampleInput">Gebruikersnaam: </label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="username" placeholder="Gebruikersnaam" required>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Wachtwoord: </label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="password" placeholder="**************" required>
+    </div>
+    <input type="submit">
+</form>
+</div>
+</div>
+</div>
+<% include partials/foot.ejs %>

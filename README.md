@@ -1,0 +1,3 @@
+# confApp
+
+Conference app template
